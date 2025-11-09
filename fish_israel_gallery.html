@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>חופי ישראל — דגים, מחבטנים ואברתניים (גלריה נטענת מהאינטרנט)</title>
+<style>
+  :root{
+    --bg:#0b1220; --card:#0f172a; --ring:#334155; --text:#e5e7eb; --muted:#94a3b8;
+    --green:#16a34a; --amber:#f59e0b; --red:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;font-family:Heebo,Arial,sans-serif;background:var(--bg);color:var(--text)}
+  h1{margin:0 0 8px;text-align:center}
+  p.lead{margin:0 0 10px;text-align:center;color:var(--muted)}
+  .legend{display:flex;gap:10px;justify-content:center;color:var(--muted);font-size:13px;margin:0 0 16px}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-left:6px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));max-width:1200px;margin:0 auto 36px}
+  .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+  .thumb{position:relative;aspect-ratio:4/3;background:#020617;display:flex;align-items:center;justify-content:center}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .placeholder{opacity:.6;font-size:13px;color:var(--muted);padding:8px;text-align:center}
+  .badge{position:absolute;top:8px;inset-inline-start:8px;color:#fff;border:1px solid #ffffff33;padding:4px 8px;border-radius:999px;font-weight:700;font-size:12px;background:#0008;backdrop-filter:blur(3px)}
+  .badge.common{background:linear-gradient(90deg,var(--green),#064e3b)}
+  .badge.mid{background:linear-gradient(90deg,var(--amber),#7c2d12)}
+  .badge.rare{background:linear-gradient(90deg,var(--red),#7f1d1d)}
+  .content{padding:12px 14px}
+  .he{margin:0 0 2px;font-weight:800}
+  .en{margin:0 0 6px;color:#d1d5db;font-size:14px}
+  .sci{font-style:italic;color:#c7d2fe;font-size:13px;margin-bottom:6px}
+  .meta{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{padding:4px 8px;border:1px solid var(--ring);border-radius:999px;background:#0b1220;font-size:12px}
+  footer{max-width:1200px;margin:0 auto;color:var(--muted);font-size:12px;text-align:center}
+  .group{max-width:1200px;margin:26px auto 10px;padding:0 4px;color:#e5e7eb;font-weight:700}
+  .group small{color:var(--muted);font-weight:500}
+</style>
+</head>
+<body>
+  <h1>חופי ישראל — דגים, מחבטנים (Skates) ואברתניים (Guitarfish)</h1>
+  <p class="lead">התמונות נטענות אוטומטית מ‑Wikidata (P18) ו‑Wikimedia Commons. יש לצפות בדף עם חיבור אינטרנט. שמות מוצגים בעברית, באנגלית ובשם מדעי.</p>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--green)"></span>נפוץ (1–2)</span>
+    <span><span class="dot" style="background:var(--amber)"></span>בינוני (3)</span>
+    <span><span class="dot" style="background:var(--red)"></span>נדיר (4–5)</span>
+  </div>
+
+  <div class="group">דגי חוף/סלע/חול <small>(ילידיים ונפוצים)</small></div>
+  <section id="grid1" class="grid"></section>
+
+  <div class="group">מינים פלגיים/טורפים</div>
+  <section id="grid2" class="grid"></section>
+
+  <div class="group">מהגרי סואץ (לספסיים)</div>
+  <section id="grid3" class="grid"></section>
+
+  <div class="group">מחבטנים (Skates) וחתולי‑ים/עיטנים/חשמלנים</div>
+  <section id="grid4" class="grid"></section>
+
+  <div class="group">אברתניים (Guitarfish)</div>
+  <section id="grid5" class="grid"></section>
+
+  <div class="group">צבי‑ים (מוגנים)</div>
+  <section id="grid6" class="grid"></section>
+
+  <footer>
+    הערות בטיחות: זהרון‑אדום, עקרבנונים וחתולי‑ים עלולים להיות ארסיים/מסוכנים; אבונפוח <i>Lagocephalus sceleratus</i> רעיל מאוד. צבי‑ים, מחבטנים רבים וכרישים מוגנים — אין לגעת/להטריד.
+  </footer>
+
+<script>
+// כל רשומה: [Hebrew, English, Scientific, Status, Rarity]
+const G1 = [
+  ["דניס","Gilthead seabream","Sparus aurata","Native","1"],
+  ["סרגוס לבן","White seabream","Diplodus sargus","Native","2"],
+  ["סרגוס דו‑פסים","Common two-banded seabream","Diplodus vulgaris","Native","1"],
+  ["מרמירון","Annular seabream","Diplodus annularis","Native","3"],
+  ["מרמירה","Striped seabream","Lithognathus mormyrus","Native","2"],
+  ["אובלדה","Saddled seabream","Oblada melanura","Native","2"],
+  ["בופס","Bogue","Boops boops","Native","2"],
+  ["סלמה","Salema porgy","Sarpa salpa","Native","2"],
+  ["פגל אדום","Common pandora","Pagellus erythrinus","Native","3"],
+  ["ברבוניה","Red mullet","Mullus barbatus","Native","2"],
+  ["ברבוניה מפוספסת","Surmullet","Mullus surmuletus","Native","2"],
+  ["בורי אפור","Flathead grey mullet","Mugil cephalus","Native","2"],
+  ["לברק אירופי","European seabass","Dicentrarchus labrax","Native","3"],
+  ["ברקודה ים‑תיכונית","European barracuda","Sphyraena sphyraena","Native","3"],
+  ["טרחון מצוי","Atlantic horse mackerel","Trachurus trachurus","Native","3"],
+  ["אנשובי אירופי","European anchovy","Engraulis encrasicolus","Native","2"],
+  ["סרדין ים‑תיכוני","European pilchard","Sardina pilchardus","Native","2"],
+  ["אתרינה","Mediterranean sand smelt","Atherina hepsetus","Native","2"],
+  ["עקרבנון שחור","Black scorpionfish","Scorpaena porcus","Native","3"],
+  ["דרקון הים","Greater weever","Trachinus draco","Native","4"],
+  ["בינון רחב‑עין","Wide-eyed flounder","Bothus podas","Native","3"],
+  ["סוסון ים קצר‑חרטום","Short-snouted seahorse","Hippocampus hippocampus","Native","4"],
+  ["סוסון ים ארוך‑חרטום","Long-snouted seahorse","Hippocampus guttulatus","Native","4"]
+];
+
+const G2 = [
+  ["פלמידה קטנה","Little tunny","Euthynnus alletteratus","Native","3"],
+  ["טונית מפוספסת","Bullet/Frigate tuna","Auxis rochei","Native","4"],
+  ["טונה כחולה","Atlantic bluefin tuna","Thunnus thynnus","Native","5"],
+  ["מאהי‑מאהי (דולפינפיש)","Mahi-mahi / Common dolphinfish","Coryphaena hippurus","Native","4"],
+  ["לברק כחול","Bluefish","Pomatomus saltatrix","Native","3"]
+];
+
+const G3 = [
+  ["סיכן מרוקד","Marbled spinefoot","Siganus rivulatus","Lessepsian","1"],
+  ["סיכן משויש","Dusky spinefoot","Siganus luridus","Lessepsian","1"],
+  ["חלילן","Bluespotted cornetfish","Fistularia commersonii","Lessepsian","3"],
+  ["אבונפוח כסוף‑לחי (רעיל)","Silver-cheeked toadfish","Lagocephalus sceleratus","Lessepsian","3"],
+  ["דג‑עור לספסי","Reticulate leatherjacket","Stephanolepis diaspros","Lessepsian","3"],
+  ["ברבון ים‑סוף","Red Sea goatfish","Parupeneus forsskali","Lessepsian","3"],
+  ["Upeneus moluccensis","Goldband goatfish","Upeneus moluccensis","Lessepsian","3"],
+  ["Upeneus pori","Por's goatfish","Upeneus pori","Lessepsian","3"],
+  ["Nemipterus randalli","Randall’s threadfin bream","Nemipterus randalli","Lessepsian","4"],
+  ["Saurida undosquamis","Brushtooth lizardfish","Saurida undosquamis","Lessepsian","3"],
+  ["Sphyraena chrysotaenia","Yellowstripe barracuda","Sphyraena chrysotaenia","Lessepsian","3"],
+  ["Sardinella aurita","Round sardinella","Sardinella aurita","Lessepsian/expanding","2"],
+  ["Herklotsichthys punctatus","Spotback herring","Herklotsichthys punctatus","Lessepsian","3"],
+  ["Etrumeus golanii","Red-eye round herring (Golan’s)","Etrumeus golanii","Lessepsian","3"],
+  ["Hemiramphus far","Blackbarred halfbeak","Hemiramphus far","Lessepsian","3"],
+  ["Alepes djedaba","Shrimp scad","Alepes djedaba","Lessepsian","3"],
+  ["Scarus ghobban","Blue-barred parrotfish","Scarus ghobban","Lessepsian","4"],
+  ["זהרון‑אדום (ארסי)","Devil firefish","Pterois miles","Lessepsian","4"]
+];
+
+// מחבטנים/חתולי‑ים/עיטנים/חשמלנים (Rays) + Skates
+const G4 = [
+  ["חתול ים מצוי","Common stingray","Dasyatis pastinaca","Native","3"],
+  ["חשמלן שיש","Marbled electric ray","Torpedo marmorata","Native","3"],
+  ["חשמלן חלק","Common torpedo","Torpedo torpedo","Native","4"],
+  ["עטן מצוי","Common eagle ray","Myliobatis aquila","Native","4"],
+  ["סטינגריי פלגי","Pelagic stingray","Pteroplatytrygon violacea","Native/Pelagic","4"],
+  ["חתול‑ים פרפרני גדול","Smooth butterfly ray","Gymnura altavela","Native","5"],
+  // Skates (מחבטנים — Rajidae/Dipturidae)
+  ["מחבטן קוץ‑גב","Thornback skate","Raja clavata","Native","4"],
+  ["מחבטן חום","Brown skate","Raja miraletus","Native","4"],
+  ["מחבטן ארוך‑חרטום","Longnosed skate","Dipturus oxyrinchus","Native","5"]
+];
+
+// אברתניים (Guitarfish; Rhinobatidae/Glaucostegidae)
+const G5 = [
+  ["אברתן חלק","Common guitarfish","Rhinobatos rhinobatos","Native","4"],
+  ["אברתן חד‑סנפיר","Blackchin guitarfish","Rhinobatos cemiculus","Native","4"]
+];
+
+// צבי‑ים
+const G6 = [
+  ["צב ים חום (קרטה)","Loggerhead sea turtle","Caretta caretta","Protected","3"],
+  ["צב ים ירוק","Green sea turtle","Chelonia mydas","Protected","3"],
+  ["צב ים תריסנית","Leatherback sea turtle","Dermochelys coriacea","Pelagic/rare","5"]
+];
+
+const groups = [
+  ["grid1", G1],
+  ["grid2", G2],
+  ["grid3", G3],
+  ["grid4", G4],
+  ["grid5", G5],
+  ["grid6", G6]
+];
+
+const rarityClass = r => (/(4|5)/.test(r)) ? 'rare' : (/3/.test(r) ? 'mid' : 'common');
+
+function renderGroup(id, rows){
+  const el = document.getElementById(id);
+  el.innerHTML = rows.map(([he, en, sci, status, rarity]) => `
+    <article class="card" data-sci="${sci}">
+      <div class="thumb">
+        <img alt="${he} / ${en}" class="photo" />
+        <span class="badge ${rarityClass(rarity)}">נדירות: ${rarity}</span>
+      </div>
+      <div class="content">
+        <h3 class="he">${he}</h3>
+        <div class="en">${en}</div>
+        <div class="sci">${sci}</div>
+        <div class="meta"><span class="chip">${status}</span></div>
+      </div>
+    </article>`).join('');
+}
+
+groups.forEach(([id, rows]) => renderGroup(id, rows));
+
+async function fetchJSON(url){ const r=await fetch(url,{mode:'cors'}); if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }
+async function resolveImageURL(scientificName){
+  const searchURL="https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&type=item&limit=1&origin=*&search="+encodeURIComponent(scientificName);
+  const s=await fetchJSON(searchURL); if(!s.search||!s.search.length) return null;
+  const qid=s.search[0].id;
+  const dataURL="https://www.wikidata.org/wiki/Special:EntityData/"+qid+".json";
+  const d=await fetchJSON(dataURL);
+  const ent=d.entities&&d.entities[qid]; const claims=ent&&ent.claims;
+  if(!claims||!claims.P18||!claims.P18.length) return null;
+  const filename=claims.P18[0].mainsnak.datavalue.value;
+  return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(filename)+"?width=1200";
+}
+
+async function loadImages(){
+  for(const [id] of groups){
+    const cards=document.querySelectorAll('#'+id+' .card');
+    for(const card of cards){
+      const sci=card.getAttribute('data-sci');
+      const img=card.querySelector('img.photo');
+      try{
+        const url=await resolveImageURL(sci);
+        if(url) img.src=url; else img.outerHTML='<div class="placeholder">תמונה לא זמינה</div>';
+      }catch(e){ img.outerHTML='<div class="placeholder">תמונה לא זמינה</div>'; }
+    }
+  }
+}
+document.addEventListener('DOMContentLoaded',loadImages);
+</script>
+</body>
+</html>
